@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      
+
       - name: STEP I - Checkout Sourcecode From Github Into Github Runner(Ubuntu-Latest)
         uses: actions/checkout@v3
 
@@ -26,10 +26,18 @@ jobs:
       - name: STEP III - Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: STEP IV - Create Directory And Move JAR Into It
+      - name: STEP IV - Cache local Maven repository
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: STEP V - Create Directory And Move JAR Into It
         run: mkdir artifact && cp target/*.jar artifact
 
-      - name: STEP V - Upload a Build Artifact
+      - name: STEP VI - Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.2
         with:
           name: artifact
