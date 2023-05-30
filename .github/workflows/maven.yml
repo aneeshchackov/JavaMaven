@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: STEP 1 - Checkout Sourcecode from github into ubuntu latest runner
+      - name: STEP 1 Checkout Sourcecode from github into ubuntu latest runner
       - uses: actions/checkout@v3
       - name: Set up JDK 17
         uses: actions/setup-java@v3
