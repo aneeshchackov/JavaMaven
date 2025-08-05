@@ -31,6 +31,8 @@ replay_pid*
 .mvn/timing.properties
 /logs/
 *.log
+mvnw
+mvnw.cmd
 
 # Maven local repository cache (optional, not recommended to ignore globally)
 /.m2/
