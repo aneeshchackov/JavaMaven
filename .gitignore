@@ -27,8 +27,8 @@ replay_pid*
 # Maven
 # ----------------------------
 /target/
-!.mvn/wrapper/maven-wrapper.jar
-.mvn/timing.properties
+#!.mvn/wrapper/maven-wrapper.jar
+#.mvn/timing.properties
 /logs/
 *.log
 mvnw
