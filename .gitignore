@@ -22,3 +22,50 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# ----------------------------
+# Maven
+# ----------------------------
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+/logs/
+*.log
+
+# Maven local repository cache (optional, not recommended to ignore globally)
+/.m2/
+
+# ----------------------------
+# Spring Boot
+# ----------------------------
+# If using Spring Boot DevTools
+.spring-boot-devtools.properties
+
+# ----------------------------
+# IntelliJ / Eclipse (optional, if teammates use other IDEs)
+# ----------------------------
+*.iml
+.idea/
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+
+# ----------------------------
+# VS Code
+# ----------------------------
+.vscode/
+.history/
+
+# ----------------------------
+# OS and general
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Environment files (if used)
+# ----------------------------
+.env
+*.env
